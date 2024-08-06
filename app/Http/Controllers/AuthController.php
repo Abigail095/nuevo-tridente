@@ -9,11 +9,11 @@ use Illuminate\Http\Request;
 class AuthController extends Controller
 {
     public function showLoginForm(){
-        return view('auth.login');
+        return view('login');
     }
 
     public function login(Request $request){
-        $credentials = $request->only('user', 'password');
+        $credentials = $request->only('email', 'password');
 
         if (Auth::attempt($credentials)) {
             return redirect('dashboard');

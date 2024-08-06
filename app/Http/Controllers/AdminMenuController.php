@@ -11,7 +11,7 @@ class AdminMenuController extends Controller
      */
     public function index()
     {
-        //
+        return view('dashboard');
     }
 
     /**
